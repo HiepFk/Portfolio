@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background: #080e24
+    url(http://neography.com/experiment/circles/solarsystem/bg.jpg) repeat;
+  color: black;
+}
+
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  width: 100%;
+  position: relative;
+  transition: all 0.09s ease-in;
+}
+
+li {
+  position: absolute;
+  border: 1px solid #394057;
+  display: block;
+}
+
+div {
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.sun {
+  top: 30rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  background-color: yellow;
+  box-shadow: 5px 10px 25px #c90;
+  z-index: 99;
+  transition: all 0.2s ease-in;
+}
+
+.mercury__line {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 8rem;
+  top: 27.5rem;
+  z-index: 98;
+}
+.mercury__cricle {
+  background-color: #b6bac5;
+  top: 6px;
+  left: 6px;
+}
+
+.venus__line {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 13rem;
+  top: 25rem;
+  z-index: 97;
+}
+.venus__cricle {
+  background-color: #bf8639;
+  top: 14px;
+  left: 14px;
+}
+
+.earth__line {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 18rem;
+  top: 22.5rem;
+  z-index: 96;
+}
+.earth__cricle {
+  background-color: #06c;
+  top: 20px;
+  left: 20px;
+}
+
+.moon {
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #ccc;
+  top: 12px;
+  left: 12px;
+}
+
+.mars__line {
+  width: 23rem;
+  height: 23rem;
+  border-radius: 23rem;
+  top: 20rem;
+  z-index: 95;
+}
+.mars__cricle {
+  background: #aa4200;
+  top: 27px;
+  left: 27px;
+}
+
+.asteroids {
+  top: 16rem;
+  z-index: 1;
+  background: url(http://neography.com/experiment/circles/solarsystem/asteroids_meteorids.png)
+    no-repeat 0 0;
+  width: 33rem;
+  height: 33rem;
+  border-radius: 16.5rem;
+  border: none;
+}
+
+.jupiter__line {
+  width: 28rem;
+  height: 28rem;
+  border-radius: 28rem;
+  top: 17.5rem;
+  z-index: 94;
+}
+.jupiter__cricle {
+  background: #e0ae6f;
+  top: 35px;
+  left: 35px;
+}
+
+.saturn__line {
+  width: 33rem;
+  height: 33rem;
+  border-radius: 33rem;
+  top: 15rem;
+  z-index: 93;
+}
+.saturn__cricle {
+  background: #dfd3a9;
+  top: 42px;
+  left: 42px;
+}
+
+.ring {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: none;
+  border: 3px solid #5a4e34;
+  left: -1px;
+  top: -1px;
+  transform: skewY(40deg);
+}
+
+.uranus__line {
+  width: 38rem;
+  height: 38rem;
+  border-radius: 38rem;
+  top: 12.5rem;
+  z-index: 92;
+}
+.uranus__cricle {
+  background: #82b3d1;
+  top: 50px;
+  left: 50px;
+}
+
+.neptune__line {
+  width: 43rem;
+  height: 43rem;
+  border-radius: 43rem;
+  top: 10rem;
+  z-index: 91;
+}
+.neptune__cricle {
+  background: #77c2ec;
+  top: 57px;
+  left: 57px;
+}
+
+.pluto__line {
+  width: 48rem;
+  height: 48rem;
+  border-radius: 48rem;
+  top: 7.5rem;
+  z-index: 89;
+}
+.pluto__cricle {
+  background: #7c6a5c;
+  top: 64px;
+  left: 64px;
+}
+
+li {
+  animation: fade linear infinite;
+}
+
+.earth__cricle {
+  animation: fade linear infinite;
+}
+
+.mercury__line {
+  animation-duration: 2s;
+}
+
+.venus__line {
+  animation-duration: 10s;
+}
+
+.earth__line {
+  animation-duration: 20s;
+}
+
+.earth__cricle {
+  animation-duration: 2s;
+}
+
+.mars__line {
+  animation-duration: 30s;
+}
+
+.asteroids {
+  animation-duration: 30s;
+}
+
+.jupiter__line {
+  animation-duration: 50s;
+}
+
+.saturn__line {
+  animation-duration: 70s;
+}
+
+.uranus__line {
+  animation-duration: 80s;
+}
+
+.neptune__line {
+  animation-duration: 100s;
+}
+
+.pluto__line {
+  animation-duration: 120s;
+}
+
+@keyframes fade {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

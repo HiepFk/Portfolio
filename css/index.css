@@ -1,0 +1,114 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background-color: #fdf9ff;
+}
+
+.infor {
+  background: url(../img/img_1.jpg) no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: auto;
+  margin: 0 auto;
+  text-align: left;
+}
+.infor__title {
+  padding-top: 40rem;
+  padding-left: 25rem;
+  font-size: 5rem;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.infor__desc {
+  margin-top: 3rem;
+  padding-left: 25rem;
+  font-size: 2.5rem;
+  color: white;
+  letter-spacing: 5px;
+  display: flex;
+  font-weight: 400;
+}
+.infor__link {
+  margin-top: 2rem;
+  padding-left: 25rem;
+  display: flex;
+}
+.infor__icon {
+  margin-right: 2rem;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .infor__title {
+    padding-top: 30rem;
+    padding-left: 5rem;
+  }
+  .infor__title span {
+    display: none;
+  }
+  .infor__desc {
+    display: block;
+  }
+  .infor__desc p {
+    margin-bottom: 1rem;
+  }
+  .infor__desc,
+  .infor__link {
+    padding-left: 5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
