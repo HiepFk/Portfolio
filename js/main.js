@@ -2,9 +2,9 @@
 // Chạy kiểu chữ
 const test = [
   " Nguyễn Huy Hiệp.",
-  " Developer.",
-  " Fucker.",
-  " Nothing When Fall In Love.",
+  // " Developer.",
+  // " Fucker.",
+  // " Nothing When Fall In Love.",
 ];
 let title = "";
 let i = 0;

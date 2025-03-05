@@ -18,34 +18,96 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="shortcut icon" href="./img/LOGO.png" />
+    <style>
+      /* CSS để định vị iframe ở góc dưới bên phải của màn hình */
+      #chatbox-iframe {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        /* width: 120px;
+        height: 120px; */
+        width: 0px;
+        height: 0px;
+        /* width: 412px;
+        height: 540px; */
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        z-index: 1000;
+      }
+    </style>
   </head>
   <body>
-    <div class="infor">
-      <h1 class="infor__title">I'M <span class="typed"></span></h1>
-      <div class="infor__desc">
-        <p>Developer ,</p>
-        <p>Fucker ,</p>
-        <p>Nothing...</p>
-        <p>When Fall In Love.</p>
-      </div>
-      <div class="infor__link">
-        <a href="https://www.facebook.com/hiepfk.128" class="infor__icon fb" title="Follow me in facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
+    <div style="position: relative">
+      <div class="infor">
+        <h1 class="infor__title">I'M <span class="typed"></span></h1>
+        <div class="infor__desc">
+          <p>Developer ,</p>
+          <p>Fucker ,</p>
+          <p>Nothing...</p>
+          <p>When Fall In Love.</p>
+        </div>
+        <div class="infor__link">
+          <a
+            href="https://www.facebook.com/hiepfk.128"
+            class="infor__icon fb"
+            title="Follow me in facebook"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
 
-        <a href="https://www.instagram.com/hiep.fk/" class="infor__icon ins" title="Follow me in Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
+          <a
+            href="https://www.instagram.com/hiep.fk/"
+            class="infor__icon ins"
+            title="Follow me in Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
 
-        <a
-          href="./html/cv.html"
-          class="infor__icon me"
-          title="Follow me in Web"
-        >
-          <i class="fa fa-user"></i>
-        </a>
+          <a
+            href="./html/cv.html"
+            class="infor__icon me"
+            title="Follow me in Web"
+          >
+            <i class="fa fa-user"></i>
+          </a>
+        </div>
+        <!-- <iframe
+          src="https://cinema-ticket-fk.netlify.app/"
+          width="100%"
+          height="100%"
+          style="border: none"
+          ></iframe> -->
       </div>
+
+      <!-- <div style="position: fixed; bottom: 0; right: 0"> -->
+      <!-- <iframe
+          src="http://localhost:3000/"
+          width="100%"
+          height="100%"
+          style="border: none"
+          z-index="9999"
+        ></iframe> -->
+
+      <!-- </div> -->
+      <iframe
+        src="http://localhost:3000/"
+        allowTransparency="true"
+        id="chatbox-iframe"
+      ></iframe>
     </div>
+    <script>
+      window.addEventListener("message", function (event) {
+        if (event.origin !== "http://localhost:3000") return; // Kiểm tra nguồn gốc để tránh tấn công
+        const { width, height } = event.data;
+        console.log("Nhận tin nhắn từ iframe:", event.data);
+        const span = document.getElementById("chatbox-iframe");
+        span.style.width = width;
+        span.style.height = height;
+        span.style.bottom = bottom;
+        span.style.right = right;
+      });
+    </script>
     <script src="./js/main.js"></script>
   </body>
 </html>
